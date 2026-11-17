@@ -76,23 +76,27 @@ const CONFIG = {
     }
   ],
  
-  // paket: items = [id produk, jumlah]. Harga paket = jumlah harga produk.
-  // Mau kasih diskon? Tambahkan  discount: 5000  (potongan dalam rupiah) pada paketnya.
+  // paket: items = [id produk, jumlah]. Harga paket = jumlah harga produk - discount (potongan dalam rupiah).
+  // Harga akhir sekarang: Abon Duo 110.000, Oleh-oleh Garut 100.000, Teman Santai 85.000.
+  // Kalau harga produk berubah, sesuaikan juga angka discount agar harga paket tetap sama.
   bundles: [
     {
       name: "Paket Abon Duo", badge: "Favorit",
       desc: "Original dan pedas sekaligus. Pas untuk dicoba berdua atau dibagi di rumah.",
-      items: [["abon-ori", 1], ["abon-pedas", 1]]
+      items: [["abon-ori", 1], ["abon-pedas", 1]],
+      discount: 5000 // 115.000 -> 110.000
     },
     {
       name: "Paket Oleh-oleh Garut", badge: "Hantaran",
       desc: "Abon, keripik pisang, dan cipeng dalam satu paket. Lengkap untuk dibawa pulang.",
-      items: [["abon-ori", 1], ["pisang-cheese", 1], ["cipeng-ori", 1]]
+      items: [["abon-ori", 1], ["pisang-cheese", 1], ["cipeng-ori", 1]],
+      discount: 10000 // 110.000 -> 100.000
     },
     {
       name: "Paket Teman Santai", badge: "Camilan",
       desc: "Pedas, manis, dan gurih dalam satu meja. Cocok untuk nonton atau kumpul keluarga.",
-      items: [["mustofa", 1], ["cipeng-pedas", 1], ["pisang-tabur", 1]]
+      items: [["mustofa", 1], ["cipeng-pedas", 1], ["pisang-tabur", 1]],
+      discount: 5000 // 90.000 -> 85.000
     }
   ]
 };
